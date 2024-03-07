@@ -1,5 +1,5 @@
 /**
- * ReferenceTable Class build the required Reference Table as a String.
+ * ReferenceTable Class builds the required Reference Table as a String.
  */
 public class ReferenceTable {
 
