@@ -1,5 +1,9 @@
 import java.io.FileNotFoundException;
 
+/**
+ * Main Class where method, launchMethod, is used to initialise
+ * Encoding and Decoding classes
+ */
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {

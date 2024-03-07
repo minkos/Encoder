@@ -1,6 +1,8 @@
-import java.util.Map;
 import java.util.Random;
 
+/**
+ * Encoding Class encodes the characters read from the I/O operation.
+ */
 public class Encoding extends ReferenceTable {
 
     private String retrievedTable;
@@ -9,11 +11,18 @@ public class Encoding extends ReferenceTable {
 
     private String encodedString = "";
 
+    /**
+     * Constructor used to build the required reference table and initialises
+     * class attribute; retrievedTable.
+     */
     public Encoding() {
         retrievedTable = super.buildTable();
     }
 
-    public String buildString() {
+    /**
+     * Another String is built here for the offset to occur.
+     */
+    private String buildString() {
 
         char currentChar = 'A';
         for (int i = 0; i < 26; i++) {
@@ -37,7 +46,10 @@ public class Encoding extends ReferenceTable {
         return constructedString;
     }
 
-    public String shiftString() {
+    /**
+     * Method to offset the String based on a random number.
+     */
+    private String shiftString() {
 
         String returnedString = buildString();
 
@@ -53,6 +65,10 @@ public class Encoding extends ReferenceTable {
         return shiftedString;
     }
 
+    /**
+     * Method to encode the read plain text, retrievedTable, based on the
+     * offset String, shiftedStringEn.
+     */
     public String encode(String plainText) {
 
         String shiftedStringEn = shiftString();

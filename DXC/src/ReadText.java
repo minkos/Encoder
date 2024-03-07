@@ -2,6 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * ReadText Class has I/O operation to read plain text file from disk.
+ */
 public class ReadText {
 
     String sentences = "";

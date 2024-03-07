@@ -1,14 +1,24 @@
+/**
+ * Decoding Class decodes the encoded text.
+ */
 public class Decoding extends ReferenceTable {
 
     private String retrievedTableDe;
     private String constructedStringDe = "";
     private String decodedString = "";
 
+    /**
+     * Constructor used to build the required reference table and initialises
+     * class attribute; retrievedTableDe.
+     */
     public Decoding() {
         retrievedTableDe = super.buildTable();
     }
 
-    public String buildStringDe() {
+    /**
+     * Another String is built here for the offset to occur.
+     */
+    private String buildStringDe() {
 
         char currentChar = 'A';
         for (int i = 0; i < 26; i++) {
@@ -32,7 +42,10 @@ public class Decoding extends ReferenceTable {
         return constructedStringDe;
     }
 
-    public String shiftStringDe(String offsetChar) {
+    /**
+     * Method to offset the String based on the offsetChar.
+     */
+    private String shiftStringDe(String offsetChar) {
 
         String returnedString = buildStringDe();
 
@@ -44,6 +57,10 @@ public class Decoding extends ReferenceTable {
         return shiftedString;
     }
 
+    /**
+     * Method to decode the encoded text based on the offset
+     * String; shiftedStringDe.
+     */
     public String decode (String encodedText) {
 
         String shiftedStringDe = shiftStringDe(String.valueOf(encodedText.charAt(0)));

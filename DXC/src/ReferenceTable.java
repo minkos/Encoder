@@ -1,3 +1,6 @@
+/**
+ * ReferenceTable Class build the required Reference Table as a String.
+ */
 public class ReferenceTable {
 
     private String constructedString = "";
